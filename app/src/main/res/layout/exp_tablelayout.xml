@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A1A"
+    android:stretchColumns="2">
+    <TableRow>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#888888"
+        android:padding="8dp"
+        android:text="Hello TableLayout"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_span="3"/>
+    </TableRow>
+
+
+        <!-- 第一行：Open... 和 Ctrl-O -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open..."
+                android:padding="8dp"
+                android:textColor="#B0B0B0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ctrl-O"
+                android:gravity="right"
+                android:padding="8dp"
+                android:textColor="#B0B0B0" />
+        </TableRow>
+
+        <!-- 第二行：Save... 和 Ctrl-S -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save..."
+                android:padding="8dp"
+                android:textColor="#B0B0B0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ctrl-S"
+                android:gravity="right"
+                android:padding="8dp"
+                android:textColor="#B0B0B0" />
+        </TableRow>
+
+        <!-- 第三行：Save As... 和 Ctrl-Shift-S -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save As..."
+                android:padding="8dp"
+                android:textColor="#B0B0B0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ctrl-Shift-S"
+                android:gravity="right"
+                android:padding="8dp"
+                android:textColor="#B0B0B0" />
+        </TableRow>
+
+        <!-- 分隔线行（可选，用于视觉分隔） -->
+        <TableRow>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#B0B0B0"
+                android:layout_span="3" />
+        </TableRow>
+
+
+        <!-- 第四行：Import... 和 Ctrl-I -->
+        <TableRow>
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:padding="8dp"
+            android:textColor="#B0B0B0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Import..."
+                android:padding="8dp"
+                android:textColor="#B0B0B0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp" />
+
+        </TableRow>
+
+        <!-- 第五行：Export... 和 Ctrl-E -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:padding="8dp"
+                android:textColor="#B0B0B0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Export..."
+                android:padding="8dp"
+                android:textColor="#B0B0B0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ctrl-E"
+                android:gravity="right"
+                android:padding="8dp"
+                android:textColor="#B0B0B0" />
+        </TableRow>
+
+        <!-- 分隔线行（可选） -->
+        <TableRow>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#B0B0B0"
+                android:layout_span="3" />
+        </TableRow>
+
+        <!-- 第六行：Quit -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quit"
+                android:padding="8dp"
+                android:textColor="#B0B0B0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp" />
+
+        </TableRow>
+</TableLayout>
