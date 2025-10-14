@@ -81,7 +81,7 @@
                 android:textColor="#B0B0B0" />
         </TableRow>
 
-        <!-- 分隔线行（可选，用于视觉分隔） -->
+        <!-- 分隔线行-->
         <TableRow>
             <View
                 android:layout_width="match_parent"
@@ -135,7 +135,7 @@
                 android:textColor="#B0B0B0" />
         </TableRow>
 
-        <!-- 分隔线行（可选） -->
+        <!-- 分隔线行-->
         <TableRow>
             <View
                 android:layout_width="match_parent"

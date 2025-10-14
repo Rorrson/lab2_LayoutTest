@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="16dp">
@@ -37,8 +38,7 @@
             app:layout_constraintTop_toBottomOf="@+id/space_station"
             app:layout_constraintStart_toStartOf="@+id/space_station"
             app:layout_constraintEnd_toEndOf="@+id/space_station"
-            android:gravity="center"
-            android:layout_marginTop="2dp" />
+            android:gravity="center"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- 区域2：Flights -->
@@ -72,8 +72,7 @@
             app:layout_constraintTop_toBottomOf="@+id/rocket"
             app:layout_constraintStart_toStartOf="@+id/rocket"
             app:layout_constraintEnd_toEndOf="@+id/rocket"
-            android:gravity="center"
-            android:layout_marginTop="2dp" />
+            android:gravity="center"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- 区域3：Rovers -->
@@ -106,19 +105,19 @@
             app:layout_constraintTop_toBottomOf="@+id/rover"
             app:layout_constraintStart_toStartOf="@+id/rover"
             app:layout_constraintEnd_toEndOf="@+id/rover"
-            android:gravity="center"
-            android:layout_marginTop="2dp" />
+            android:gravity="center"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/departure"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="100dp"
-        app:layout_constraintStart_toStartOf="@+id/group_station"
-        app:layout_constraintTop_toBottomOf="@+id/group_station"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group_flight"
+        app:layout_constraintBottom_toTopOf="@id/details"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        android:layout_marginTop="60dp">
+        tools:layout_editor_absoluteX="0dp">
 
         <TextView
             android:id="@+id/tv_dca"
@@ -136,37 +135,36 @@
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
-    <TextView
-        android:id="@+id/tv_mars"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="#2E7D32"
-        android:gravity="center"
-        android:text="MARS"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:layout_marginRight="50dp"
-        android:layout_marginLeft="-10dp"
-        app:layout_constraintStart_toEndOf="@+id/iv_arrow"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_weight="1" />
-    <!-- 中间区域：双向箭头图标 -->
-    <ImageView
-        android:id="@+id/iv_arrow"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:scaleType="fitCenter"
-        android:layout_marginLeft="-10dp"
-        android:layout_marginRight="-10dp"
-        android:src="@drawable/double_arrows"
-        app:layout_constraintStart_toEndOf="@+id/tv_dca"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tv_mars"
-        app:layout_constraintHorizontal_bias="0.5"/>
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_mars"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginRight="50dp"
+            android:background="#2E7D32"
+            android:gravity="center"
+            android:text="MARS"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/iv_arrow"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!-- 中间区域：双向箭头图标 -->
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/double_arrows"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -175,38 +173,38 @@
         android:id="@+id/details"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/departure"
-        app:layout_constraintVertical_weight="1">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/departure">
 
         <!-- 1 Traveller 区域 -->
         <Switch
             android:id="@+id/one_way_switch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:background="#D2691E"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:switchPadding="16dp"
             android:text="One Way"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
-            android:background="#D2691E"
-            android:trackTint="#D2691E"
             android:thumbTint="#FFFFFF"
-            android:padding="12dp"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:switchPadding="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:trackTint="#D2691E"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
             android:id="@+id/text_one_traveller"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="16dp"
             android:background="#D2691E"
             android:gravity="center"
             android:padding="12dp"
@@ -220,27 +218,23 @@
             android:id="@+id/iv_small_rocket"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginTop="80dp"
             android:src="@drawable/rocket_icon"
-            app:layout_constraintBottom_toBottomOf="@+id/depart"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/depart"
             app:layout_constraintEnd_toStartOf="@+id/iv_planet"
-            app:layout_constraintHorizontal_bias="0.811"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.59" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/iv_planet"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="160dp"
             android:src="@drawable/galaxy"
-            app:layout_constraintBottom_toBottomOf="@+id/depart"
+            app:layout_constraintBottom_toTopOf="@+id/depart"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/details"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_small_rocket"/>
 
         <Button
             android:id="@+id/depart"
@@ -248,17 +242,13 @@
             android:layout_height="wrap_content"
             android:background="#2E7D32"
             android:gravity="center"
-            android:text="DEPART"
             android:padding="12dp"
-            android:layout_marginTop="120dp"
+            android:text="DEPART"
             android:textColor="#FFFFFF"
-            app:layout_constraintTop_toBottomOf="@+id/iv_planet"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
